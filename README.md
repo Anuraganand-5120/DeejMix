@@ -41,3 +41,10 @@ A `deploy.ps1` script is included to automatically compile a release build and u
 
 ## Hardware Requirements
 This software is designed to communicate with microcontrollers (like Arduino Nano/Uno) running standard Deej firmware, sending serial data in the format: `val|val|val|val\r\n`.
+
+## Credits
+
+DeejMix is inspired by the original Deej project, an open-source hardware volume mixer that allows physical sliders to control individual app volumes on Windows. This project builds upon that idea with a redesigned modern UI, advanced hardware visualization, profiles, calibration tools, and a more polished desktop experience.
+
+Original Deej Project: https://github.com/omriharel/deej
+
