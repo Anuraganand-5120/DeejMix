@@ -1,0 +1,281 @@
+/* ═══════════════════════════════════════════════════════════════
+   DeejMix — 3D Dark Theme Stylesheet
+   Accent color placeholders: %ACCENT%, %ACCENT_DARK%
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Global Settings ── */
+* {
+    font-family: "Segoe UI", "Inter", sans-serif;
+}
+
+/* ── Main Window ── */
+QMainWindow {
+    background-color: #030610;
+    color: #E2E8F0;
+}
+
+/* ── Sidebar ── */
+QListWidget#sidebarList {
+    background-color: #050914;
+    border: none;
+    border-right: 1px solid #10162A;
+    padding-top: 20px;
+    outline: none;
+}
+
+QListWidget#sidebarList::item {
+    color: #94A3B8;
+    padding: 16px 24px;
+    margin: 4px 16px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+QListWidget#sidebarList::item:hover {
+    background-color: #151E2F;
+    color: #FFFFFF;
+}
+
+QListWidget#sidebarList::item:selected {
+    background-color: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 %ACCENT_DARK%, stop:1 #0B1120);
+    color: #FFFFFF;
+    border-left: 4px solid %ACCENT%;
+}
+
+/* ── Stacked Widget ── */
+QStackedWidget {
+    background-color: #0B1120;
+}
+
+/* ── Channel Cards (3D Beveled) ── */
+QWidget#ChannelCard {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1A2744, stop:0.5 #151E2F, stop:1 #0F1829);
+    border-top: 1px solid #2A3F5F;
+    border-left: 1px solid #243452;
+    border-bottom: 1px solid #0A0F1A;
+    border-right: 1px solid #0D1320;
+    border-radius: 12px;
+}
+
+/* ── Labels ── */
+QLabel {
+    color: #E2E8F0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background: transparent;
+}
+
+QLabel#SecondaryText {
+    color: %ACCENT%;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+QLabel#Header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+QLabel#AppIcon {
+    background: transparent;
+    border: none;
+}
+
+/* ── Dropdowns (3D) ── */
+QComboBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1A2744, stop:1 #0F1829);
+    border: 1px solid #2A3F5F;
+    border-bottom: 2px solid #0A0F1A;
+    border-radius: 6px;
+    padding: 6px 12px;
+    color: #E2E8F0;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+QComboBox:hover {
+    border: 1px solid %ACCENT%;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #111827;
+    color: #E2E8F0;
+    selection-background-color: %ACCENT_DARK%;
+    selection-color: #FFFFFF;
+    border: 1px solid #2A3F5F;
+    border-radius: 4px;
+    outline: none;
+}
+
+/* ── Sliders (3D Grooved) ── */
+QSlider::groove:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 #060A14, stop:0.4 #0D1525, stop:0.6 #0D1525, stop:1 #1A2540);
+    width: 8px;
+    border-radius: 4px;
+    border: 1px solid #0A0F1A;
+}
+
+QSlider::handle:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #E0E4EC, stop:0.5 #B0B8C8, stop:1 #808898);
+    height: 18px;
+    margin: 0 -5px;
+    border-radius: 9px;
+    border-top: 1px solid #F0F2F8;
+    border-bottom: 1px solid #606878;
+}
+
+QSlider::add-page:vertical {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0,
+        stop:0 %ACCENT_DARK%, stop:0.5 %ACCENT%, stop:1 %ACCENT_DARK%);
+    border-radius: 4px;
+}
+
+QSlider::sub-page:vertical {
+    background: #0D1525;
+    border-radius: 4px;
+}
+
+/* ── Buttons (3D Raised) ── */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1A2744, stop:1 #0F1829);
+    border: 1px solid %ACCENT%;
+    border-top: 1px solid %ACCENT%;
+    border-bottom: 2px solid #0A0F1A;
+    color: %ACCENT%;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 %ACCENT_DARK%, stop:1 #0F1829);
+    color: #FFFFFF;
+}
+
+QPushButton:pressed {
+    background: %ACCENT_DARK%;
+    border-top: 2px solid #0A0F1A;
+    border-bottom: 1px solid %ACCENT%;
+    color: #FFFFFF;
+}
+
+/* ── GroupBox (Settings / Calibration visibility fix) ── */
+QGroupBox {
+    color: #E2E8F0;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    border: 1px solid #2A3F5F;
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 24px 16px 16px 16px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #151E2F, stop:1 #0F1829);
+}
+
+QGroupBox::title {
+    color: #F1F5F9;
+    subcontrol-origin: margin;
+    left: 16px;
+    padding: 2px 10px;
+    background: #151E2F;
+    border-radius: 4px;
+}
+
+/* ── Checkboxes ── */
+QCheckBox {
+    color: #E2E8F0;
+    spacing: 10px;
+    font-size: 13px;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+QCheckBox::indicator {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #475569;
+    border-radius: 4px;
+    background: #0F1829;
+}
+
+QCheckBox::indicator:checked {
+    background: %ACCENT%;
+    border-color: %ACCENT%;
+}
+
+QCheckBox::indicator:hover {
+    border-color: %ACCENT%;
+}
+
+/* ── SpinBox ── */
+QSpinBox {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+        stop:0 #1A2744, stop:1 #0F1829);
+    color: #E2E8F0;
+    border: 1px solid #2A3F5F;
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    background: #1E293B;
+    border: 1px solid #2A3F5F;
+    width: 18px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background: %ACCENT_DARK%;
+}
+
+/* ── Status Bar ── */
+QStatusBar {
+    background-color: #080E1C;
+    color: #94A3B8;
+    border-top: 1px solid #1E293B;
+    font-family: "Inter", "Segoe UI", sans-serif;
+    font-size: 12px;
+}
+
+/* ── Scroll Bars ── */
+QScrollBar:vertical {
+    background: #0B1120;
+    width: 8px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #2A3F5F;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: %ACCENT_DARK%;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* ── Tooltips ── */
+QToolTip {
+    background: #1A2744;
+    color: #E2E8F0;
+    border: 1px solid %ACCENT_DARK%;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
