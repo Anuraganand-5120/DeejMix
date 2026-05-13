@@ -44,7 +44,7 @@ This software is designed to communicate with microcontrollers (like Arduino Nan
 
 ## Credits
 
-DeejMix is inspired by the original Deej project, an open-source hardware volume mixer that allows physical sliders to control individual app volumes on Windows. This project builds upon that idea with a redesigned modern UI, advanced hardware visualization, profiles, calibration tools, and a more polished desktop experience.
+DeejMix is inspired by the original deej project, an open-source hardware volume mixer that allows physical sliders to control individual app volumes on Windows. This project builds upon that idea with a redesigned modern UI, advanced hardware visualization, profiles, calibration tools, and a more polished desktop experience.
 
 Original Deej Project: https://github.com/omriharel/deej
 
